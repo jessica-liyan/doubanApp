@@ -1,0 +1,8 @@
+{
+  "name": "douban",
+  "app_id": "7d0cf7fe",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
