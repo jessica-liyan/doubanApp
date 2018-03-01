@@ -15,3 +15,109 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+html,body{font-family:'PingFang SC', tahoma, arial, 'helvetica neue', 'hiragino sans gb', 'microsoft yahei ui', 'microsoft yahei', simsun, sans-serif;}
+p,h2{margin:0;}
+dl,dt,dd,ul,li{margin:0;padding:0;}
+em,i{font-style:normal;}b{font-weight:normal;}
+.t-l{text-align:left;}.t-c{text-align:center;}.t-r{text-align:right;}
+.v-m{vertical-align:middle;}
+.block{display:block;white-space:pre-wrap;}.ib{display:inline-block;}
+img{vertical-align:middle;}
+.w{width:100%;}
+.mb-10{margin-bottom:1rem!important;}.mt-10{margin-top:1rem!important;}
+.mt-20{margin-top:2rem!important;}
+
+// 图片样式
+ion-img{
+  background:transparent;
+  vertical-align:middle;
+  min-width:14px;
+  min-height:14px;
+  img{
+    max-width:100%;
+    min-height:100%;
+  }
+}
+// 状态栏
+.platform-android{
+  ion-header { 
+    padding-top: $cordova-md-statusbar-padding;
+  }
+}
+.content{
+  background:#f5f5f5;
+}
+// header样式
+.header{
+  border-bottom:1px solid #ddd;
+  &[blue]{
+    background:#3076EC;
+    .toolbar-background{
+      background:#3076EC;
+      border:0;
+    }
+    .toolbar-title{
+      font-size:1.8rem;
+      color: #fff;
+      font-weight:normal;
+      text-align:center;
+    }
+  }
+  &[white]{
+    background:#fff;
+    .toolbar-background{
+      background:#fff;
+      border:0;
+    }
+    .toolbar-title{
+      font-size:1.8rem;
+      color: #333;
+      font-weight:normal;
+      text-align:center;
+    }
+  }
+  ion-title{
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:100%;
+    padding:0 50px;
+  }
+  .back-button{
+    display:block;
+    background:url('../assets/imgs/back.png') no-repeat center center;
+    background-size:auto 100%;
+    min-width:auto;
+    min-height:auto;
+    width:1.8rem;
+    height:1.8rem;
+    padding:0 1em;
+    z-index:99;
+    &:after,.button-inner{
+      display:none;
+    }
+    .back-button-text{
+      display:none;
+    }
+  }
+  .text .button-inner{
+    font-size:1.6rem;
+    color:#fff;
+  }
+  .bar-buttons-md[start]{
+    text-align:left;
+    order:3;
+  }
+}
+// 去除安卓阴影
+.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before{
+  content:none;
+}
+.button-md{
+  box-shadow:none;
+}
+// list
+.list{
+  margin-bottom:1rem;
+}

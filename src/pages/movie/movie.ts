@@ -9,6 +9,7 @@ import { DataProvider } from '../../providers/data/data';
 })
 export class MoviePage {
   movieInTheater;
+  movieComing;
 
   constructor(
     public navCtrl: NavController, 
@@ -21,6 +22,10 @@ export class MoviePage {
     this.data.fetchMovieInTheater().subscribe(res => {
       console.log(res)
       this.movieInTheater = res['subjects']
+    })
+    this.data.fetchMovieComing().subscribe(res => {
+      console.log(res)
+      this.movieComing = res['subjects']
     })
   }
 }
