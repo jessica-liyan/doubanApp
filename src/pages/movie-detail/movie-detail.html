@@ -1,0 +1,30 @@
+<ion-header black>
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="img">
+    <img [src]="(movie | async)?.images.large" height="150">
+  </div>
+  <div class="wrap">
+    <p class="info">{{(movie | async)?.year}}/{{(movie | async)?.countries.join('/')}}{{(movie | async)?.genres.join('/')}}</p>
+    <dl class="list">
+      <dt>剧情简介：</dt>
+      <dd>{{(movie | async)?.summary}}</dd>
+    </dl>
+    <dl class="list">
+      <dt>影人：</dt>
+      <dd>
+        <ion-scroll scrollX="true" style="height:14rem;background:#fff;">
+          <div *ngFor="let item of (movie | async)?.casts" class="list-item">
+            <ion-img [src]="item.avatars.small" width="120" height="120"></ion-img>
+            <i>{{item.name}}</i>
+          </div>
+        </ion-scroll>
+      </dd>
+    </dl>
+  </div>
+</ion-content>
+

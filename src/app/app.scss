@@ -49,7 +49,7 @@ ion-img{
 }
 // header样式
 .header{
-  border-bottom:1px solid #ddd;
+  border-bottom:0;
   &[blue]{
     background:#3076EC;
     .toolbar-background{
@@ -63,7 +63,21 @@ ion-img{
       text-align:center;
     }
   }
+  &[black]{
+    background:#333;
+    .toolbar-background{
+      background:#333;
+      border:0;
+    }
+    .toolbar-title{
+      font-size:1.8rem;
+      color: #fff;
+      font-weight:normal;
+      text-align:center;
+    }
+  }
   &[white]{
+    border-bottom:1px solid #ddd;
     background:#fff;
     .toolbar-background{
       background:#fff;
@@ -86,7 +100,7 @@ ion-img{
   }
   .back-button{
     display:block;
-    background:url('../assets/imgs/back.png') no-repeat center center;
+    background:url('../assets/imgs/back1.png') no-repeat center center;
     background-size:auto 100%;
     min-width:auto;
     min-height:auto;
@@ -120,4 +134,23 @@ ion-img{
 // list
 .list{
   margin-bottom:1rem;
+}
+
+// 横向滚动
+ion-scroll.scroll-x .scroll-content{
+  white-space:nowrap;
+  padding:0 1rem;
+  margin:0 -5px;
+}
+.list-item{
+  display: inline-block;
+  vertical-align:middle;
+  text-align:center;
+  padding:1rem 5px;
+  i{
+    display: block;
+    font-size:1.3rem;
+    color:#666;
+    margin:5px 0;
+  }
 }

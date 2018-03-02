@@ -1,0 +1,30 @@
+page-movie-detail {
+  .content{
+    background:#fff;
+  }
+  .img{
+    padding:2rem 0;
+    background:#333;
+    text-align:center;
+  }
+  .wrap{
+    padding:1rem;
+    .info{
+      font-size:1.3rem;
+      color:#999;
+      margin-bottom:1rem;
+    }
+    .list{
+      font-size:1.4rem;
+      line-height:1.6;
+      dt{
+        color:#999;
+        margin-bottom:0.5rem;
+      }
+      dd{
+        font-size:1.4rem;
+        color:#333;
+      }
+    }
+  }
+}

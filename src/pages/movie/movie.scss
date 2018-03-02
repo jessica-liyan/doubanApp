@@ -20,21 +20,4 @@ page-movie {
       transform:translateY(-50%);
     }
   }
-  ion-scroll.scroll-x .scroll-content{
-    white-space:nowrap;
-    padding:0 1rem;
-    margin:0 -5px;
-  }
-  .list-item{
-    display: inline-block;
-    vertical-align:middle;
-    text-align:center;
-    padding:1rem 5px;
-    i{
-      display: block;
-      font-size:1.3rem;
-      color:#666;
-      margin:5px 0;
-    }
-  }
 }

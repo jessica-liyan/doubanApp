@@ -10,7 +10,7 @@
 <ion-content>
   <h2 class="sub-title">正在热映</h2>
   <ion-scroll scrollX="true" style="height:14rem;background:#fff;">
-    <div *ngFor="let item of movieInTheater" class="list-item">
+    <div *ngFor="let item of movieInTheater" class="list-item" (click)="gotoDetail(item)">
       <img [src]="item.images.small" height="120"/>
       <i>{{item.title}}</i>
     </div>
